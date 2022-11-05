@@ -14,10 +14,14 @@ export function layout(data) {
     const wordsScale = d3.scaleLinear()
         .domain([0, getMaxWords(data)])
         .range([config.fig_height, 0])
+
+    const wordsAxis = d3.axisLeft(wordsScale)
     
     const chapterScale = d3.scaleLinear()
         .domain([1, getMaxChapter(data)])
         .range([0, config.fig_width])
+
+    const chapterAxis = d3.axisBottom(chapterScale)
     
     const layoutData = data.map(d => {        
         const item = {}
@@ -29,5 +33,5 @@ export function layout(data) {
         return item
     })
 
-    return layoutData
+    return [layoutData, chapterAxis, wordsAxis]
 }

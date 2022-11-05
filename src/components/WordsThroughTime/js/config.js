@@ -1,9 +1,9 @@
 const settings = {
     margin: {
-        top: 10,
-        right: 10,
-        bottom: 10,
-        left: 10
+        top: 20,
+        right: 20,
+        bottom: 30,
+        left: 40
     },
     box_width: 800,
     box_height: 600,

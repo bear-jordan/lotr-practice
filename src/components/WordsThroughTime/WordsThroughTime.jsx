@@ -3,25 +3,14 @@ import * as d3 from "d3"
 
 import './WordsThroughTime.css'
 import { config } from "./js/config"
-import { layout } from "./js/layout"
-import { data } from "./js/request"
+import { update } from './js/update'
 
-function WordsThroughTime() {
+function WordsThroughTime({ data }) {
   const svgRef = useRef()
 
   useEffect(() => {
     const svg = d3.select(svgRef.current)
-    const figureData = layout([data])
-
-    svg.select(".figure")
-      .attr("transform", "translate("+config.margin.left+","+config.margin.top+")")
-
-    svg.select(".paths")
-      .selectAll(".path")
-      .data(figureData)
-      .join("path")
-      .attr("d", d => d.d)
-      .classed("path", true)
+    update(svg, data)
   }, [])
 
   return (

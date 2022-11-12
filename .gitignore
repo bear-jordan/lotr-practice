@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+database/data/characters.js
+database/data/fellowship-quotes.js
+database/data/movies.js
+database/data/return-of-the-king-quotes.js
+database/data/two-towers-quotes.js
+database/lotr/CURRENT
+database/lotr/IDENTITY
+database/lotr/LOCK
+database/lotr/LOG
+database/lotr/MANIFEST-000005
+database/lotr/OPTIONS-000007
